@@ -1,1 +1,1 @@
-Citrus Disease Recommendation System 🍋‍🟩
+🍋 Citrus Disease Recommendation System 🍋
