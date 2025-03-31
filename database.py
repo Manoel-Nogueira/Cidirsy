@@ -1,7 +1,8 @@
 import mysql.connector
 
 # Senha do banco de dados
-senhabd = "123456789"
+#senhabd = "123456789"
+senhabd = "univasf"
 
 # Função para criar o banco de dados
 def CreateDataBase():
