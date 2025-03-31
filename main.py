@@ -89,7 +89,7 @@ while continuar:
         continuar = False
 
     # Opções dos sintomas
-    elif 1 <= escolha <= 20:
+    elif 1 <= escolha <= len(sintomas):
 
         # Adicionando a escolha do usuário a lista de escolhas
         escolhas.append(sintomas[escolha][1])
@@ -99,8 +99,8 @@ while continuar:
 
     elif escolha == 0:
 
-        # Tirando os [] da lista de escolhas
-        #lista = str(escolhas)[1:-1]
+        # Limpando o console
+        clearconsole.ClearConsole()
 
         # Pegando as doenças que mais tem os sintomas que o usuário escolheu
         doencas = database.ShowDoencas(escolhas)
@@ -109,13 +109,11 @@ while continuar:
         print("\033[32m \n\n#######------->  Seu citros pode ter uma dessas doenças:  <-------####### \n\n")
         print("\033[31m -1 -> Sair")
         print("\033[36m Qualquer número (menos o -1) -> Voltar\n")
-        print("\033[34m Sintomas: \n")
+        print("\033[34m Doenças: \n")
 
         # Listando as doenças
-        aux = 1
         for x in doencas:
-            print('\033[33m', aux, "->", x[0])
-            aux += 1
+            print('\033[33m', "->", x[0])
 
         # Pegando a escolha do usuário
         opcao = input("\033[34m \nEscolha uma opção:")
@@ -134,11 +132,10 @@ while continuar:
 
             continuar = False
 
-        elif -1 > opcao > -1:
+        elif -1 > opcao or opcao > -1  :
 
             sintomas = database.ShowSintomas()
             continue
-
 
     else:
 
