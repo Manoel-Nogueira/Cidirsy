@@ -1,1 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Bahiana&display=swap");
 @import "tailwindcss";
+
+@theme {
+    --font-bahiana: "Bahiana", Static;
+}

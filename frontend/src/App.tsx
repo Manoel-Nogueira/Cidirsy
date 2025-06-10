@@ -1,13 +1,15 @@
-function App() {
+import { BrowserRouter } from "react-router-dom";
+import { Router } from "../router"
+
+export function App() {
 
   return (
-    <>
     
-      <p className='text-blue-700 text-6xl'>Hello World</p>
-
-    </>
+    <BrowserRouter>
+      <Router/>
+    </BrowserRouter>
    
   )
 }
 
-export default App
+
